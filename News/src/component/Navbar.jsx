@@ -1,7 +1,13 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({setCategory}) => {
+    const categoryHandler=(e)=>
+    {
+        setCategory(e.target.innerText);
+        console.log(category);
+    }
   return (
+
     <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
   <div className="container-fluid">
     <a className="navbar-brand" href="#"><span className="badge bg-light text-dark p-2">Purity First News</span></a>
@@ -20,13 +26,16 @@ const Navbar = () => {
           <a className="nav-link" href="#">Pricing</a>
         </li>
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
+          <div className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Category
+          </div>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          <li><div className="dropdown-item" onClick={(e) => categoryHandler(e)}>science</div></li>
+          <li><div className="dropdown-item" onClick={(e) => categoryHandler(e)}>business</div></li>
+          <li><div className="dropdown-item" onClick={(e) => categoryHandler(e)}>healths</div></li>
+          <li><div className="dropdown-item" onClick={(e) => categoryHandler(e)}>entertainment</div></li>
+          <li><div className="dropdown-item" onClick={(e) => categoryHandler(e)}>technology</div></li>
+          <li><div className="dropdown-item" onClick={(e) => categoryHandler(e)}>sports</div></li>
           </ul>
         </li>
       </ul>
