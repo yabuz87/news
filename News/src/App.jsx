@@ -9,7 +9,7 @@ function App(){
 
   return (
     <div>
-      <Navbar setCategory={setCategory} setLanguage={setLanguage}/>
+      <Navbar setCategory={setCategory} category={category} setLanguage={setLanguage}/>
       <NewsBoard category={category} lang={language}/>
     </div>
   )

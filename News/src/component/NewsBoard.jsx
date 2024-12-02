@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import NewsArticle from './NewsArticle';
+import Footer from './footer/Footer';
 
 const NewsBoard = ({category,language}) => {
   const [articles, setArticles] = useState([]);
@@ -26,14 +27,16 @@ const NewsBoard = ({category,language}) => {
     };
 
     fetchData();
-  }, [category]);
+    setLoading(true);
+  }, [category,language]);
 
   if (error) {
     return <p>Error: {error}</p>;
   }
 
   return (
-    <div>
+    <>
+    <div id="contain">
       <h1 className="text-center">Latest<span className="badge bg-danger py-2 m-2">News</span></h1>
       <div className="container-fluid d-flex row text-center align-items-top justify-content-center">
         {
@@ -49,6 +52,8 @@ const NewsBoard = ({category,language}) => {
         }
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
