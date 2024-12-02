@@ -35,7 +35,7 @@ const NewsBoard = ({category,language}) => {
   return (
     <div>
       <h1 className="text-center">Latest<span className="badge bg-danger py-2 m-2">News</span></h1>
-      <div className="container-fluid d-flex row text-center justify-content-center">
+      <div className="container-fluid d-flex row text-center align-items-top justify-content-center">
         {
           loading ? (
             <div className="spinner-border text-primary" role="status">
