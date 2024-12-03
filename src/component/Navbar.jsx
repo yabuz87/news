@@ -8,7 +8,7 @@ const Navbar = ({setCategory,category}) => {
 
   return ( 
 
-    <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-top">
     <div className="container-fluid">
       <a className="navbar-brand" onClick={()=>setCategory("general")}><span className="badge bg-light text-dark p-2">Purity First News</span></a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

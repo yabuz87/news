@@ -1,6 +1,7 @@
 
 .contact{
     display:flex;
+    height:50px;
     flex-direction: column;
 }
 .footer{

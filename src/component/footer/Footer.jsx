@@ -3,13 +3,13 @@ import "./Footer.css"
 
 function Footer() {
   return (
-    <div className="container-lg bg-dark text-light">
+    <div className="container-fluid bg-dark text-light">
     <hr></hr>
     <div className="contact">
         <h2 className="text-center">Contact us</h2>
         <p className="text-center">you can contact us to learn more and give any feedback by the following social media links and email</p>
         <div className="social-medias">
-            <p><i className="bi bi-instagram"></i>
+            <p><i className="bi text-light bi-instagram"></i>
             </p>
             <p><i className="bi bi-facebook"></i></p>
             <p><i className="bi bi-tiktok"></i></p>

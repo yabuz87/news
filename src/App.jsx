@@ -11,6 +11,7 @@ function App(){
     <div>
       <Navbar setCategory={setCategory} category={category} setLanguage={setLanguage}/>
       <NewsBoard category={category} lang={language}/>
+      
     </div>
   )
 }
