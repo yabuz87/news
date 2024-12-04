@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import NewsArticle from './NewsArticle';
 import Footer from './footer/Footer';
 
-const NewsBoard = ({category,language}) => {
+const NewsBoard = ({ category, language }) => {
   const [articles, setArticles] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,9 +25,9 @@ const NewsBoard = ({category,language}) => {
       }
     };
 
+    setLoading(true); // Move this line here
     fetchData();
-    setLoading(true);
-  }, [category,language]);
+  }, [category, language]);
 
   if (error) {
     return <p>Error: {error}</p>;
@@ -36,23 +35,23 @@ const NewsBoard = ({category,language}) => {
 
   return (
     <>
-    <div id="contain">
-      <h1 className="text-center">Latest<span className="badge bg-danger py-2 m-2">News</span></h1>
-      <div className="container-fluid d-flex row text-center align-items-top justify-content-center">
-        {
-          loading ? (
-            <div className="spinner-border text-primary" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-          ) : (
-            articles.map((item, index) => (
-              <NewsArticle key={index} title={item.title} src={item.urlToImage} description={item.description} url={item.url} />
-            ))
-          )
-        }
+      <div id="contain">
+        <h1 className="text-center">Latest<span className="badge bg-danger py-2 m-2">News</span></h1>
+        <div className="container-fluid d-flex row text-center align-items-top justify-content-center">
+          {
+            loading ? (
+              <div className="spinner-border text-primary" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            ) : (
+              articles.map((item, index) => (
+                <NewsArticle key={index} title={item.title} src={item.urlToImage} description={item.description} url={item.url} />
+              ))
+            )
+          }
+        </div>
       </div>
-    </div>
-    <Footer/>
+      <Footer />
     </>
   );
 };
