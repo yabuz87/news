@@ -12,7 +12,11 @@ const NewsBoard = ({ category, language }) => {
       try {
         const apiKey = 'dd8e0d11dff34c5aba5d5d5ec5d3e0de';
         const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&${language}&apiKey=${apiKey}`;
-        const response = await fetch(url);
+        const response = await fetch(url, {
+          headers: {
+            'Upgrade': 'HTTP/2.0'
+          }
+        });
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -25,7 +29,7 @@ const NewsBoard = ({ category, language }) => {
       }
     };
 
-    setLoading(true); // Move this line here
+    setLoading(true);
     fetchData();
   }, [category, language]);
 
