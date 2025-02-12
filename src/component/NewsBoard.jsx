@@ -10,13 +10,11 @@ const NewsBoard = ({ category, language }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-       const apiKey = import.meta.env.VITE_MYAPI;
-        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&${language}&apiKey=${apiKey}`;
-        const response = await fetch(url, {
-          headers: {
-            'Upgrade': 'HTTP/2.0'
-          }
-        });
+        const apiKey = import.meta.env.VITE_MYAPI;
+        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&language=${language}&apiKey=${apiKey}`;
+        console.log('API Key:', apiKey); // Logging for debugging
+        console.log('URL:', url); // Logging for debugging
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
