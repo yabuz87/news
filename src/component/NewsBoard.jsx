@@ -10,7 +10,7 @@ const NewsBoard = ({ category, language }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const apiKey = 'dd8e0d11dff34c5aba5d5d5ec5d3e0de';
+       const apiKey = import.meta.env.VITE_MYAPI;
         const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&${language}&apiKey=${apiKey}`;
         const response = await fetch(url, {
           headers: {

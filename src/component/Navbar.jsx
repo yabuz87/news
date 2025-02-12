@@ -33,13 +33,13 @@ const Navbar = ({setCategory,category}) => {
             <a className="nav-link active bg-primary" aria-current="page" href="#">{category.toUpperCase()}</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>Business</a>
+            <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>business</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>Health</a>
+            <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>health</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>Entertainment</a>
+            <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>entertainment</a>
           </li>
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>technology</a>
