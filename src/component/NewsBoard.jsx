@@ -50,8 +50,10 @@ const NewsBoard = ({ category, language }) => {
             )
           }
         </div>
+       <div className={`${loading ?  'd-none': 'd-block'}`}>
+       <Footer/>
+       </div>
       </div>
-      <Footer />
     </>
   );
 };
