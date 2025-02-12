@@ -30,7 +30,22 @@ const Navbar = ({setCategory,category}) => {
             </ul>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">{category.toUpperCase()}</a>
+            <a className="nav-link active bg-primary" aria-current="page" href="#">{category.toUpperCase()}</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>Business</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>Health</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>Entertainment</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>technology</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="#" onClick={(e) => categoryHandler(e)}>sports</a>
           </li>
         </ul>
         

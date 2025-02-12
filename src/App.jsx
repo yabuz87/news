@@ -1,4 +1,4 @@
-import React,{useState,useEffect}from 'react'
+import React,{useState,useEffect} from 'react'
 import Navbar from './component/Navbar';
 import NewsBoard from './component/NewsBoard';
 
